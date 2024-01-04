@@ -8,10 +8,10 @@
             Entity = reader.ReadEntityId();
             Position = reader.ReadVector3f();
             Heading = reader.ReadAngle();
-            Model = reader.ReadUInt32();
+            Model = (uint)reader.ReadInt32();
             SkillId = new SkillId(reader).Id;
-            EndType = reader.ReadInt32();
-            Id = reader.ReadUInt32();
+            // EndType = reader.ReadInt32();
+            // Id = reader.ReadUInt32();
 //            Debug.WriteLine($"{Time.Ticks} {BitConverter.ToString(BitConverter.GetBytes(Entity.Id))}: {Start} {Heading} -> {Finish}, S:{Speed} ,{Ltype} {unk1} {unk2}" );
         }
 
