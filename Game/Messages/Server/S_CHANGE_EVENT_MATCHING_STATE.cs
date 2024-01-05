@@ -17,6 +17,7 @@ namespace Tera.Game.Messages
         {
             if (reader.Factory.ReleaseVersion < 70000)
             {
+                Type = MatchingType.Dungeon;
                 Searching = reader.ReadBoolean();
                 return;
             }
