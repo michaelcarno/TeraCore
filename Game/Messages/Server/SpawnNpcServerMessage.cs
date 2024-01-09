@@ -16,7 +16,7 @@ namespace Tera.Game.Messages
             // EnrageThreshold = reader.Factory.ReleaseVersion >= 10100 || reader.Factory.ReleaseVersion==9901 ? reader.ReadInt64() : 0;
             Position = reader.ReadVector3f();
             Heading = reader.ReadAngle();
-            // reader.Skip(4);
+            reader.Skip(4);
             NpcId = reader.ReadUInt32();
             NpcArea = reader.ReadUInt16();
             reader.Skip(
