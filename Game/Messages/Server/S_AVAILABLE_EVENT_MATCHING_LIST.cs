@@ -7,10 +7,10 @@ namespace Tera.Game.Messages
         internal S_AVAILABLE_EVENT_MATCHING_LIST(TeraMessageReader reader)
             : base(reader)
         {
-            if (reader.Factory.ReleaseVersion < 6000)
-                reader.Skip(24);
-            else
-                reader.Skip(63);
+            // if (reader.Factory.ReleaseVersion < 6000)
+            reader.Skip(24);
+            // else
+            // reader.Skip(63);
             Badges = reader.ReadInt32();
             Credits = reader.ReadInt32();
         }
